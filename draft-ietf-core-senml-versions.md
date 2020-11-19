@@ -21,7 +21,7 @@ title: >
   SenML Features and Versions
 abbrev: >
   SenML Features and Versions
-date: 2020-05-13
+date: 2020-11-15
 author:
 -
   ins: C. Bormann
@@ -38,7 +38,14 @@ normative:
   RFC8428: senml
   RFC8126: ianacons
   IANA.senml:
-  I-D.ietf-core-senml-more-units: units
+  RFC8798: units
+  C:
+    title: Information technology — Programming languages — C
+    author:
+      org: International Organization for Standardization
+    date: 2018-06
+    seriesinfo:
+      ISO/IEC: 9899:2018, Fourth Edition
 
 
 --- abstract
@@ -46,6 +53,16 @@ normative:
 This short document updates RFC 8428, Sensor Measurement Lists
 (SenML), by specifying the use of independently selectable "SenML
 Features" and mapping them to SenML version numbers.
+
+--- to_be_removed_note_Discussion_Venues
+
+Discussion of this document takes place on the
+CORE Working Group mailing list (core@ietf.org),
+which is archived at
+<https://mailarchive.ietf.org/arch/browse/core/>.
+
+Source for this draft and an issue tracker can be found at
+<https://github.com/core-wg/senml-versions>.
 
 --- middle
 
@@ -71,9 +88,12 @@ them to SenML version number space, updating {{RFC8428}}.
 
 {::boilerplate bcp14}
 
-Where bit arithmetic is explained, this document uses
-the notation familiar from the programming language C, except that
-"\*\*" denotes exponentiation.
+Where bit arithmetic is explained, this document uses the notation
+familiar from the programming language C {{C}}, except that superscript
+notation (example for two to the power of 64: 2<sup>64</sup>) denotes
+exponentiation; in the plain text version of this draft, superscript
+notation is rendered by C-incompatible surrogate notation as seen in
+this example.
 
 # Feature Codes and the Version number
 
@@ -108,7 +128,7 @@ unit names {{-units}} MAY be be used in the "u" field of SenML Records, in addit
 primary unit names already allowed by {{RFC8428}}.
 
 Note that the most basic use of this feature simply sets the SenML
-version number to 26 (10 + 2**4).
+version number to 26 (10 + 2<sup>4</sup>).
 
 # Security Considerations {#seccons}
 
