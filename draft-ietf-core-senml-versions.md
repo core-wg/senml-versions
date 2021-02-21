@@ -22,7 +22,7 @@ title: >
   SenML Features and Versions
 abbrev: >
   SenML Features and Versions
-date: 2021-02-12
+date: 2021-02-21
 author:
 -
   ins: C. Bormann
@@ -212,5 +212,6 @@ not allocate more than 10 % of the remaining set per year.
 # Acknowledgements {#acks}
 {: numbered="no"}
 
-Ari Keranen proposed to use the version number as a bitmap and
+{{{Ari Keränen}}} proposed to use the version number as a bitmap and
 provided further input on this specification.
+{{{Jaime Jiménez}}} help clarify the document by providing a review.
