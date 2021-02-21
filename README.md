@@ -2,7 +2,7 @@
 
 This is the working area for the IETF [CORE Working Group](https://datatracker.ietf.org/wg/core/documents/) Internet-Draft, "SenML Features and Versions".
 
-* [Editor's Copy](https://core-wg.github.io/senml-versions/#go.draft-ietf-core-senml-versions.html) [![Build Status](https://travis-ci.org/core-wg/senml-versions.svg?branch=master)](https://travis-ci.org/core-wg/senml-versions)
+* [Editor's Copy](https://core-wg.github.io/senml-versions/#go.draft-ietf-core-senml-versions.html)
 * [Working Group Draft](https://tools.ietf.org/html/draft-ietf-core-senml-versions)
 * [Compare Editor's Copy to Working Group Draft](https://core-wg.github.io/senml-versions/#go.draft-ietf-core-senml-versions.diff)
 
