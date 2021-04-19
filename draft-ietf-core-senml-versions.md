@@ -107,8 +107,8 @@ prefix for binary numbers defined in Section 5.13.2 of the C++
 language standard {{Cplusplus}}, except that superscript notation
 (example for two to the power of 64: 2<sup>64</sup>) denotes
 exponentiation; in the plain text version of this draft, superscript
-notation is rendered by C-incompatible surrogate notation as seen in
-this example.
+notation is rendered in paragraph text by C-incompatible surrogate
+notation as seen in this example.
 
 # Feature Codes and the Version number
 
@@ -196,7 +196,7 @@ The initial content of this registry is as follows:
 |            1 | Reserved1       | RFCthis       |
 |            2 | Reserved2       | RFCthis       |
 |            3 | Reserved3       | RFCthis       |
-|            4 | Secondary Units | RFCthis       |
+|            4 | Secondary Units | RFCthis, {{-units}} |
 {: #feat title="Features defined for SenML at the time of writing"}
 
 As the number of features that can be registered has a hard limit (48
@@ -206,6 +206,10 @@ allocation, keeping code points available for SenML Features that are
 likely to be useful for non-trivial subsets of the SenML ecosystem.
 Quantitatively, the expert could for instance steer the allocation to
 not allocate more than 10 % of the remaining set per year.
+
+Where the specification of the feature code is provided in a document
+that is separate from the specification of the feature itself (as with
+feature code 4 above), both specifications should be listed.
 
 --- back
 
