@@ -89,7 +89,7 @@ The traditional idea of using a version number to indicate the
 evolution of an interchange format generally assumes an incremental
 progression of the version number as the format accretes additional
 features over time.
-However in the case of SenML it is expected that the likely evolution
+However, in the case of SenML, it is expected that the likely evolution
 will be for independently selectable capability _features_ to be added
 to the basic specification that is indicated by version number 10.
 To support this model, this document repurposes the single version
@@ -157,7 +157,7 @@ communicated via fields labeled with names that end with the "_"
 character ("must-understand fields"), see {{Section 4.4 of -senml}}.)
 
 Most representations visible to engineers working with SenML will use
-decimal numbers, e.g. 26 (0b11010, 0x1a) for a version that adds the
+decimal numbers, e.g., 26 (0b11010, 0x1a) for a version that adds the
 "Secondary Units" feature ({{secondary-units}}).  This is sightly unwieldy, but
 will be quickly memorized in practice.
 
@@ -199,7 +199,7 @@ semantics except in a specification that updates the present specification.
 # Feature: Secondary Units {#secondary-units}
 
 The feature "Secondary Units" (code number 4) indicates that secondary
-unit names {{-units}} MAY be be used in the "u" field of SenML Records, in addition to the
+unit names {{-units}} MAY be used in the "u" field of SenML Records, in addition to the
 primary unit names already allowed by {{-senml}}.
 
 Note that the most basic use of this feature simply sets the SenML
