@@ -48,16 +48,6 @@ Status of This Memo
 
    This Internet-Draft will expire on 5 December 2021.
 
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 1]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
-
 Copyright Notice
 
    Copyright (c) 2021 IETF Trust and the persons identified as the
@@ -74,20 +64,20 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-     1.1.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   3
-   2.  Feature Codes and the Version number  . . . . . . . . . . . .   3
-     2.1.  Discussion  . . . . . . . . . . . . . . . . . . . . . . .   4
-     2.2.  Updating RFC8428  . . . . . . . . . . . . . . . . . . . .   4
-   3.  Features: Reserved0, Reserved1, Reserved2, Reserved3  . . . .   5
-   4.  Feature: Secondary Units  . . . . . . . . . . . . . . . . . .   5
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
-   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .   7
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   8
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
+   1.  Introduction
+     1.1.  Terminology
+   2.  Feature Codes and the Version number
+     2.1.  Discussion
+     2.2.  Updating RFC8428
+   3.  Features: Reserved0, Reserved1, Reserved2, Reserved3
+   4.  Feature: Secondary Units
+   5.  Security Considerations
+   6.  IANA Considerations
+   7.  References
+     7.1.  Normative References
+     7.2.  Informative References
+   Acknowledgements
+   Author's Address
 
 1.  Introduction
 
@@ -106,13 +96,6 @@ Table of Contents
    records so that it is interpreted as a bitmap that indicates the set
    of features a recipient would need to have implemented to be able to
    process the pack.
-
-
-
-Bormann                  Expires 5 December 2021                [Page 2]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
 
    This short document specifies the use of SenML Features and maps them
    to SenML version number space, updating [RFC8428].
@@ -162,14 +145,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    possible with today's RFCXML, add the Sigma character as a
    parenthesis after "sum" in the caption.
 
-
-
-
-Bormann                  Expires 5 December 2021                [Page 3]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
-
 2.1.  Discussion
 
    Representing features as a bitmap within a number is quite efficient
@@ -216,16 +191,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    versions before 10, it certainly is no longer true with this
    specification.
 
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 4]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
-
    Any SenML pack that sets feature bits beyond the first four will lead
    to a version number that actually is greater than 10, so the
    requirement in Section 4.4 of [RFC8428] will prevent false
@@ -269,18 +234,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    which poses no additional security considerations except for some
    potential for surprise that version numbers do not simply increase
    linearly.
-
-
-
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 5]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
 
 6.  IANA Considerations
 
@@ -327,16 +280,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    Quantitatively, the expert could for instance steer the allocation to
    a target of not allocating more than 10 % of the remaining set per
    year.
-
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 6]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
 
    Where the specification of the feature code is provided in a document
    that is separate from the specification of the feature itself (as
@@ -386,14 +329,6 @@ Internet-Draft         SenML Features and Versions             June 2021
 
 7.2.  Informative References
 
-
-
-
-Bormann                  Expires 5 December 2021                [Page 7]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
-
    [RFC7493]  Bray, T., Ed., "The I-JSON Message Format", RFC 7493,
               DOI 10.17487/RFC7493, March 2015,
               <https://www.rfc-editor.org/info/rfc7493>.
@@ -419,30 +354,3 @@ Author's Address
 
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 8]
