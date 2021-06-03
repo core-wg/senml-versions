@@ -117,8 +117,8 @@ plaintext representation, as is the sum (Sigma) sign.
 # Feature Codes and the Version number
 
 The present specification defines "SenML Features", each identified by a "feature
-name" (a text string) and a "feature code", an unsigned integer less
-than 53.
+name" (a text string) and a "feature code" (an unsigned integer less
+than 53).
 
 The specific version of a SenML pack is composed of a set of
 features.
@@ -151,7 +151,7 @@ taken by the feature defined in {{secondary-units}}, leaving 48 for allocation.
 (The current version 10 (with all other feature codes unset) can be
 visualized as `0b00000000000000000000000000000000000000000000000001010`.)
 For a lifetime of this scheme of several decades, approximately two feature codes
-per year or less should be allocated.
+per year or fewer should be allocated.
 Note that less generally applicable features can always be
 communicated via fields labeled with names that end with the "_"
 character ("must-understand fields"), see {{Section 4.4 of -senml}}.)
