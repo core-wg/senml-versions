@@ -4,6 +4,7 @@ ipr: trust200902
 docname: draft-ietf-core-senml-versions-latest
 keyword: Internet-Draft
 cat: std
+consensus: yes
 updates: 8428
 wg: CoRE
 pi:
@@ -22,7 +23,7 @@ title: >
   SenML Features and Versions
 abbrev: >
   SenML Features and Versions
-date: 2021-05-09
+date: 2021-06-03
 author:
 -
   ins: C. Bormann
@@ -135,6 +136,9 @@ present, 0 otherwise.
 (The expression 2<sup>fc</sup> can be implemented as `1 << fc` in C
 and related languages.)
 
+RFC editor: Please check that, in the TXT version, no `&nbsp;` crept
+into the above due to xml2rfc bug 641, and remove this sentence.
+
 ## Discussion
 
 Representing features as a bitmap within a number is quite efficient as long as
@@ -160,6 +164,16 @@ Most representations visible to engineers working with SenML will use
 decimal numbers, e.g., 26 (0b11010, 0x1a) for a version that adds the
 "Secondary Units" feature ({{secondary-units}}).  This is slightly unwieldy, but
 will be quickly memorized in practice.
+
+As a general observation, ending up over time with dozens of
+individually selectable optional extensions may lead to too many
+variants of what is supported by different implementations, reducing
+interoperability.  So, in practice, it is still desirable to batch up
+extensions that are expected to be supported together into a single
+feature bit, leading to a sort of hybrid between completely
+independent extensions and a linear version scheme.  This is also
+another reason why a space of 48 remaining feature codes should
+suffice for a while.
 
 ## Updating {{Section 4.4 of -senml}}
 
@@ -245,7 +259,7 @@ specifically instructed to maintain a frugal regime of code point
 allocation, keeping code points available for SenML Features that are
 likely to be useful for non-trivial subsets of the SenML ecosystem.
 Quantitatively, the expert could for instance steer the allocation to
-not allocate more than 10 % of the remaining set per year.
+a target of not allocating more than 10 % of the remaining set per year.
 
 Where the specification of the feature code is provided in a document
 that is separate from the specification of the feature itself (as with
@@ -261,6 +275,8 @@ provided further input on this specification.
 {{{Jaime Jiménez}}} helped clarify the document by providing a review.
 {{{Elwyn Davies}}} provided a detailed GENART review, with directly
 implementable text suggestions that now form part of this specification.
+{{{Rob Wilton}}} supplied comments one of which became the last
+paragraph of {{discussion}}.
 
 <!--  LocalWords:  selectable subregistry whitespace
  -->
