@@ -115,7 +115,7 @@ notation is rendered in paragraph text by C-incompatible surrogate
 notation as seen in this example, and in display math by a crude
 plaintext representation, as is the sum (Sigma) sign.
 
-# Feature Codes and the Version number
+# Feature Codes and the Version number {#codes}
 
 The present specification defines "SenML Features", each identified by a "feature
 name" (a text string) and a "feature code" (an unsigned integer less
@@ -124,12 +124,14 @@ than 53).
 The specific version of a SenML pack is composed of a set of
 features.
 The SenML version number (`bver` field) is then a bitmap of these
-features, specifically the sum of, for each feature present, two taken
-to the power of the feature code of that feature.
+features represented as an unsigned integer, specifically the sum of,
+for each feature present, two taken
+to the power of the feature code of that feature ({{bitmap-as-sum}}).
 
 ~~~ math
 version = \sum_{fc=0}^{52} present(fc)  ⋅  2^{fc}
 ~~~
+{: #bitmap-as-sum title="Feature bitmap as a sum of feature bits"}
 
 where present(fc) is 1 if the feature with the feature code `fc` is
 present, 0 otherwise.
@@ -137,7 +139,9 @@ present, 0 otherwise.
 and related languages.)
 
 RFC editor: Please check that, in the TXT version, no `&nbsp;` crept
-into the above due to xml2rfc bug 641, and remove this sentence.
+into the above due to xml2rfc bug 641, and remove this paragraph.  If
+possible with today's RFCXML, add the Sigma character as a parenthesis
+after "sum" in the caption.
 
 ## Discussion
 
@@ -276,7 +280,8 @@ provided further input on this specification.
 {{{Elwyn Davies}}} provided a detailed GENART review, with directly
 implementable text suggestions that now form part of this specification.
 {{{Rob Wilton}}} supplied comments one of which became the last
-paragraph of {{discussion}}.
+paragraph of {{discussion}}; {{{Éric Vyncke}}} helped with {{codes}}.
+Additional thanks go to the other IESG reviewers.
 
 <!--  LocalWords:  selectable subregistry whitespace
  -->
