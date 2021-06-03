@@ -158,7 +158,7 @@ character ("must-understand fields"), see {{Section 4.4 of -senml}}.)
 
 Most representations visible to engineers working with SenML will use
 decimal numbers, e.g., 26 (0b11010, 0x1a) for a version that adds the
-"Secondary Units" feature ({{secondary-units}}).  This is sightly unwieldy, but
+"Secondary Units" feature ({{secondary-units}}).  This is slightly unwieldy, but
 will be quickly memorized in practice.
 
 ## Updating {{Section 4.4 of -senml}}
