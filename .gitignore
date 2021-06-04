@@ -15,3 +15,4 @@ venv/
 lib
 draft-ietf-core-senml-versions.xml
 *.v2v3.xml
+*.prepped.xml

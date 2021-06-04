@@ -23,7 +23,7 @@ title: >
   SenML Features and Versions
 abbrev: >
   SenML Features and Versions
-date: 2021-06-03
+date: 2021-06-04
 author:
 -
   ins: C. Bormann
@@ -210,9 +210,13 @@ backwards compatible, it will accept 42, but not 10.)
 For SenML Version 10 as described in {{-senml}}, the feature codes 0 to 3 are already in use.
 Reserved1 (1) and Reserved3 (3) are always present
 and the features Reserved0 (0) and Reserved2 (2) are always absent,
-yielding a version number of 10 if no other feature is in use.
+i.e., the four least significant bits set to 0b1010 indicate a version
+number of 10 if no other feature is in use.
 These four reserved feature codes are not to be used with any more specific
 semantics except in a specification that updates the present specification.
+(Note that Reserved0 and Reserved2 could be used in such a
+specification in a similar way to the way the feature codes 4 to 52
+are in the present specification.)
 
 # Feature: Secondary Units {#secondary-units}
 
