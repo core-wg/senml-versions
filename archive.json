@@ -1,0 +1,110 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2021-07-13T00:43:25.761285+00:00",
+  "repo": "core-wg/senml-versions",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "MDExOlB1bGxSZXF1ZXN0NTcyMzk4MDA2",
+      "title": "Address Jaime's review",
+      "url": "https://github.com/core-wg/senml-versions/pull/1",
+      "state": "MERGED",
+      "author": "cabo",
+      "authorAssociation": "MEMBER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2021-02-12T09:47:11Z",
+      "updatedAt": "2021-02-21T17:16:13Z",
+      "baseRepository": "core-wg/senml-versions",
+      "baseRefName": "master",
+      "baseRefOid": "48f1ea13069b6d5c691b20c413713fd8de3bc9b3",
+      "headRepository": "core-wg/senml-versions",
+      "headRefName": "2021-02-12",
+      "headRefOid": "5ee21270e79838c2d65729c435a968ab6a8658c1",
+      "closedAt": "2021-02-21T17:16:13Z",
+      "mergedAt": "2021-02-21T17:16:13Z",
+      "mergedBy": "cabo",
+      "mergeCommit": {
+        "oid": "5027a70a572b7f82c0094fa721081022b9f9812d"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NTg5MzEzNjc4",
+          "commit": {
+            "abbreviatedOid": "5ee2127"
+          },
+          "author": "jaimejim",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "Much more clear now, thank you!",
+          "createdAt": "2021-02-12T09:56:51Z",
+          "updatedAt": "2021-02-12T09:56:51Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NTk0ODYxNDY2",
+          "commit": {
+            "abbreviatedOid": "5ee2127"
+          },
+          "author": "akeranen",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2021-02-21T17:13:29Z",
+          "updatedAt": "2021-02-21T17:13:29Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
+}
