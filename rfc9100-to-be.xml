@@ -4,16 +4,6 @@
 
 <rfc xmlns:xi="http://www.w3.org/2001/XInclude" ipr="trust200902" docName="draft-ietf-core-senml-versions-05" number="9100" submissionType="IETF" category="std" consensus="true" updates="8428" obsoletes="" xml:lang="en" tocInclude="true" tocDepth="3"
 symRefs="true" sortRefs="true" version="3">
-
-<!--[rfced] We've updated the title of this document to expand
-"SenML". Please let us know if this is not preferred.
-
-Original:
-   SenML Features and Versions
-
-Updated:
-   Sensor Measurement Lists (SenML) Features and Versions
--->
   
   <front>
     <title abbrev="SenML Features and Versions ">Sensor Measurement Lists
@@ -35,8 +25,11 @@ Updated:
     <date year="2021" month="July"/>
     <workgroup>CoRE</workgroup>
 
-<!-- [rfced] Please insert any keywords (beyond those that appear in
-the title) for use on https://www.rfc-editor.org/search. -->
+
+<keyword>Internet of Things (IoT)</keyword>
+<keyword>Internet of Things</keyword>
+<keyword>IOT</keyword>
+<keyword>data model</keyword>
 
     <abstract>
       <t>This short document updates RFC 8428, "Sensor Measurement Lists
@@ -46,7 +39,6 @@ the title) for use on https://www.rfc-editor.org/search. -->
   </front>
   <middle>
     <section anchor="intro" numbered="true" toc="default">
-
 
 <!-- [rfced] We note the use of <tt> and <em> in some places.  Please note that in the txt output, the text enclosed in <tt> appears in quotation marks, while it appears in fixed-width font in html and pdf outputs.  
 
@@ -60,7 +52,7 @@ Please review carefully and let us know if the output is acceptable or if any up
       target="RFC8428" format="default"/> provides a version number that is
       initially set to 10, without further specification on the way to make
       use of different version numbers.</t>
-      <t>The traditional idea of using a version number to indicate the
+      <t>The common idea of using a version number to indicate the
       evolution of an interchange format generally assumes an incremental
       progression of the version number as the format accretes additional
       features over time. However, in the case of SenML, it is expected that
@@ -110,11 +102,7 @@ Please review carefully and let us know if the output is acceptable or if any up
       power of the feature code of that feature (<xref target="bitmap-as-sum"
       format="default"/>).</t>
       <figure anchor="bitmap-as-sum">
-        <name>Feature Bitmap as a Sum of Feature Bits</name>
-	
-<!--[rfced] Regarding Figure 1 in the text output, would the figure be
-clearer if "2^fc" were used to represent the exponent?
--->
+        <name>Feature Bitmap as a Sum (Sigma Symbol) of Feature Bits</name>
 	
         <artset>
           <artwork type="svg" name="" align="left" alt=""><svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" height="7.676ex" role="img" viewBox="0 -1867.7 12842.8 3304.9" width="29.829ex">
@@ -183,8 +171,8 @@ clearer if "2^fc" were used to represent the exponent?
               </g>
             </svg>
           </artwork>
-          <artwork type="ascii-art" name="" align="left" alt=""><![CDATA[           __ 52                   fc
-version = \         present(fc) ⋅ 2
+          <artwork type="ascii-art" name="" align="left" alt=""><![CDATA[           __ 52                   
+version = \         present(fc) ⋅ 2^fc
           /__ fc = 0
 ]]></artwork>
         </artset>
@@ -193,13 +181,6 @@ version = \         present(fc) ⋅ 2
 present, 0 otherwise.
 (The expression 2<sup>fc</sup> can be implemented as <tt>1 &lt;&lt; fc</tt> in C
 and related languages.)</t>
-
-
-<!--[rfced] FYI: We are unable to add the Sigma character to a figure
-title at this time as the Unicode must be within <u>, but <u> is
-currently not allowed within <name>. We will discuss this with
-the XML Schema Group.
--->
 
 
       <section anchor="discussion" numbered="true" toc="default">
@@ -243,8 +224,6 @@ suffice for a while.</t>
       <section anchor="updating-section-44-of-rfc8428" numbered="true" toc="default">
         <name>Updating Section 4.4 of RFC 8428</name>
 
-<!-- [rfced] FYI: We've removed the hyperlinks from the title of Section 2.2 because it causes bad output in the Table of Contents (i.e., "Updating RFC8428")
--->
         <t>The last paragraph of <xref section="4.4" sectionFormat="of"
         target="RFC8428" format="default"/> may be read to give the impression
         that SenML version numbers are totally ordered, i.e., that an
@@ -301,10 +280,12 @@ numbers do not simply increase linearly.</t>
     </section>
     <section anchor="iana" numbered="true" toc="default">
       <name>IANA Considerations</name>
-      <t>IANA has created a new "SenML Features" subregistry within
-      the "Sensor Measurement Lists (SenML)" registry <xref target="IANA.SENML" format="default"/> with the
-      registration policy "Specification Required" <xref target="RFC8126"
-      format="default"/> and the columns:</t>
+      <t>IANA has created a new "<xref section="SenML Features"
+      sectionFormat="bare" target="IANA.SENML" relative="#senml-features"/>"
+      subregistry within the "Sensor Measurement Lists (SenML)" registry <xref
+      target="IANA.SENML" format="default"/> with the registration policy
+      "Specification Required" <xref target="RFC8126" format="default"/> and
+      the columns:</t>
       <ul spacing="normal">
         <li>Feature Code (an unsigned integer less than 53)</li>
         <li>Feature Name (text)</li>
@@ -314,7 +295,7 @@ numbers do not simply increase linearly.</t>
       <t>To facilitate the use of feature names in programs, the designated
       expert is requested to ensure that feature names are usable as
       identifiers in most programming languages, after lowercasing the feature
-      name in the registry entry and replacing whitespace with underscores or
+      name in the registry entry and replacing blank space with underscores or
       hyphens, and that they also are distinct in this form.</t>
       <t>The initial content of this registry is as follows:</t>
       <table anchor="feat" align="center">
@@ -375,8 +356,6 @@ feature code 4 above), both specifications should be listed.</t>
 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8428.xml"/>
 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8126.xml"/>
 
-<!-- [IANA.senml] The URL below is correct but redirects to https://www.iana.org/assignments/senml/senml.xhtml -->
-
         <reference anchor="IANA.SENML" target="https://www.iana.org/assignments/senml">
           <front>
             <title>Sensor Measurement Lists (SenML)</title>
@@ -389,7 +368,7 @@ feature code 4 above), both specifications should be listed.</t>
 
 <xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml/reference.RFC.8798.xml"/>
 
-<!--  [C] The URL below is correct -->
+
 
         <reference anchor="C" target="https://www.iso.org/standard/74528.html">
           <front>
@@ -402,7 +381,7 @@ feature code 4 above), both specifications should be listed.</t>
           <seriesInfo name="ISO/IEC" value="9899:2018, Fourth Edition"/>
         </reference>
 
-<!-- [Cplusplus] The URL below is correct -->
+
 
         <reference anchor="CPLUSPLUS" target="https://www.iso.org/standard/79358.html">
           <front>
@@ -438,17 +417,6 @@ feature code 4 above), both specifications should be listed.</t>
       target="discussion" format="default"/>; <contact fullname="Éric
       Vyncke"/> helped with <xref target="codes" format="default"/>.
       Additional thanks go to the other IESG reviewers.</t>
-
-<!-- [rfced] Please review the "Inclusive Language" portion of the online 
-Style Guide <https://www.rfc-editor.org/styleguide/part2/#inclusive_language> 
-and let us know if any changes are needed.  
-
-For example, please consider whether the following should be updated:
-
-   "traditional"
-
-   "whitespace"
--->
 
 </section>
   </back>
