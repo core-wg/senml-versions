@@ -10,7 +10,7 @@ symRefs="true" sortRefs="true" version="3">
     (SenML) Features and Versions</title>
     <seriesInfo name="RFC" value="9100"/>
     <author initials="C." surname="Bormann" fullname="Carsten Bormann">
-      <organization>Universitaet Bremen TZI</organization>
+      <organization>Universität Bremen TZI</organization>
       <address>
         <postal>
           <street>Postfach 330440</street>
@@ -171,8 +171,9 @@ Please review carefully and let us know if the output is acceptable or if any up
               </g>
             </svg>
           </artwork>
-          <artwork type="ascii-art" name="" align="left" alt=""><![CDATA[           __ 52                   
-version = \         present(fc) ⋅ 2^fc
+          <artwork type="ascii-art" name="" align="left" alt=""><![CDATA[
+           __ 52                    fc
+version = \           present(fc) ⋅ 2
           /__ fc = 0
 ]]></artwork>
         </artset>
@@ -207,7 +208,7 @@ and related languages.)</t>
         fields"). See <xref section="4.4" sectionFormat="of" target="RFC8428"
         format="default"/> for details.</t>
         <t>Most representations visible to engineers working with SenML will
-        use decimal numbers, e.g., 26 (0b11010, 0x1a), for a version that adds
+        use decimal numbers.  For instance, 26 (0b11010, 0x1a) denotes a version that adds
         the "Secondary Units" feature (<xref target="secondary-units"
         format="default"/>).  This is slightly unwieldy but will be quickly
         memorized in practice.</t>
