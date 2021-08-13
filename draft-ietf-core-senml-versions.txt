@@ -4,9 +4,9 @@
 
 CoRE                                                          C. Bormann
 Internet-Draft                                   Universitaet Bremen TZI
-Updates: 8428 (if approved)                                  3 June 2021
+Updates: 8428 (if approved)                                  4 June 2021
 Intended status: Standards Track                                        
-Expires: 5 December 2021
+Expires: 6 December 2021
 
 
                       SenML Features and Versions
@@ -46,17 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 5 December 2021.
-
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 1]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
+   This Internet-Draft will expire on 6 December 2021.
 
 Copyright Notice
 
@@ -74,20 +64,20 @@ Copyright Notice
 
 Table of Contents
 
-   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
-     1.1.  Terminology . . . . . . . . . . . . . . . . . . . . . . .   3
-   2.  Feature Codes and the Version number  . . . . . . . . . . . .   3
-     2.1.  Discussion  . . . . . . . . . . . . . . . . . . . . . . .   4
-     2.2.  Updating RFC8428  . . . . . . . . . . . . . . . . . . . .   4
-   3.  Features: Reserved0, Reserved1, Reserved2, Reserved3  . . . .   5
-   4.  Feature: Secondary Units  . . . . . . . . . . . . . . . . . .   5
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .   5
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   6
-   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   7
-     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   7
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .   7
-   Acknowledgements  . . . . . . . . . . . . . . . . . . . . . . . .   8
-   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   8
+   1.  Introduction
+     1.1.  Terminology
+   2.  Feature Codes and the Version number
+     2.1.  Discussion
+     2.2.  Updating RFC8428
+   3.  Features: Reserved0, Reserved1, Reserved2, Reserved3
+   4.  Feature: Secondary Units
+   5.  Security Considerations
+   6.  IANA Considerations
+   7.  References
+     7.1.  Normative References
+     7.2.  Informative References
+   Acknowledgements
+   Author's Address
 
 1.  Introduction
 
@@ -106,13 +96,6 @@ Table of Contents
    records so that it is interpreted as a bitmap that indicates the set
    of features a recipient would need to have implemented to be able to
    process the pack.
-
-
-
-Bormann                  Expires 5 December 2021                [Page 2]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
 
    This short document specifies the use of SenML Features and maps them
    to SenML version number space, updating [RFC8428].
@@ -147,8 +130,8 @@ Internet-Draft         SenML Features and Versions             June 2021
    the sum of, for each feature present, two taken to the power of the
    feature code of that feature (Figure 1).
 
-              __ 52                       fc
-   version = \         present(fc) ⋅ 2
+              __ 52                   fc
+   version = \         present(fc)&nbsp;⋅&nbsp;2
              /__ fc = 0
 
              Figure 1: Feature bitmap as a sum of feature bits
@@ -161,14 +144,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    into the above due to xml2rfc bug 641, and remove this paragraph.  If
    possible with today's RFCXML, add the Sigma character as a
    parenthesis after "sum" in the caption.
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 3]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
 
 2.1.  Discussion
 
@@ -216,16 +191,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    versions before 10, it certainly is no longer true with this
    specification.
 
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 4]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
-
    Any SenML pack that sets feature bits beyond the first four will lead
    to a version number that actually is greater than 10, so the
    requirement in Section 4.4 of [RFC8428] will prevent false
@@ -247,10 +212,13 @@ Internet-Draft         SenML Features and Versions             June 2021
    For SenML Version 10 as described in [RFC8428], the feature codes 0
    to 3 are already in use.  Reserved1 (1) and Reserved3 (3) are always
    present and the features Reserved0 (0) and Reserved2 (2) are always
-   absent, yielding a version number of 10 if no other feature is in
-   use.  These four reserved feature codes are not to be used with any
-   more specific semantics except in a specification that updates the
-   present specification.
+   absent, i.e., the four least significant bits set to 0b1010 indicate
+   a version number of 10 if no other feature is in use.  These four
+   reserved feature codes are not to be used with any more specific
+   semantics except in a specification that updates the present
+   specification.  (Note that Reserved0 and Reserved2 could be used in
+   such a specification in a similar way to the way the feature codes 4
+   to 52 are in the present specification.)
 
 4.  Feature: Secondary Units
 
@@ -269,18 +237,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    which poses no additional security considerations except for some
    potential for surprise that version numbers do not simply increase
    linearly.
-
-
-
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 5]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
 
 6.  IANA Considerations
 
@@ -328,16 +284,6 @@ Internet-Draft         SenML Features and Versions             June 2021
    a target of not allocating more than 10 % of the remaining set per
    year.
 
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 6]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
-
    Where the specification of the feature code is provided in a document
    that is separate from the specification of the feature itself (as
    with feature code 4 above), both specifications should be listed.
@@ -364,39 +310,31 @@ Internet-Draft         SenML Features and Versions             June 2021
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
               DOI 10.17487/RFC2119, March 1997,
-              <https://www.rfc-editor.org/info/rfc2119>.
+              <https://datatracker.ietf.org/doc/html/rfc2119>.
 
    [RFC8126]  Cotton, M., Leiba, B., and T. Narten, "Guidelines for
               Writing an IANA Considerations Section in RFCs", BCP 26,
               RFC 8126, DOI 10.17487/RFC8126, June 2017,
-              <https://www.rfc-editor.org/info/rfc8126>.
+              <https://datatracker.ietf.org/doc/html/rfc8126>.
 
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
+              May 2017, <https://datatracker.ietf.org/doc/html/rfc8174>.
 
    [RFC8428]  Jennings, C., Shelby, Z., Arkko, J., Keranen, A., and C.
               Bormann, "Sensor Measurement Lists (SenML)", RFC 8428,
               DOI 10.17487/RFC8428, August 2018,
-              <https://www.rfc-editor.org/info/rfc8428>.
+              <https://datatracker.ietf.org/doc/html/rfc8428>.
 
    [RFC8798]  Bormann, C., "Additional Units for Sensor Measurement
               Lists (SenML)", RFC 8798, DOI 10.17487/RFC8798, June 2020,
-              <https://www.rfc-editor.org/info/rfc8798>.
+              <https://datatracker.ietf.org/doc/html/rfc8798>.
 
 7.2.  Informative References
 
-
-
-
-Bormann                  Expires 5 December 2021                [Page 7]
-
-Internet-Draft         SenML Features and Versions             June 2021
-
-
    [RFC7493]  Bray, T., Ed., "The I-JSON Message Format", RFC 7493,
               DOI 10.17487/RFC7493, March 2015,
-              <https://www.rfc-editor.org/info/rfc7493>.
+              <https://datatracker.ietf.org/doc/html/rfc7493>.
 
 Acknowledgements
 
@@ -419,30 +357,3 @@ Author's Address
 
    Phone: +49-421-218-63921
    Email: cabo@tzi.org
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Bormann                  Expires 5 December 2021                [Page 8]
